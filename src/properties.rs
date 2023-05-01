@@ -178,6 +178,16 @@ pub const TOTAL_SST_FILES_SIZE: &CStr = property!("total-sst-files-size");
 /// files belong to the latest LSM tree.
 pub const LIVE_SST_FILES_SIZE: &CStr = property!("live-sst-files-size");
 
+/// "rocksdb.total-blob-file-size" - returns total size (bytes) of all BLOB
+/// files.
+/// WARNING: may slow down online queries if there are too many files.
+pub const TOTAL_BLOB_FILE_SIZE: &CStr = property!("total-blob-file-size");
+
+/// "rocksdb.live-blob-file-size" - returns total size (bytes) of all BLOB
+/// files belong to the latest LSM tree.
+pub const LIVE_BLOB_FILE_SIZE: &CStr = property!("live-blob-file-size");
+
+
 /// "rocksdb.base-level" - returns number of level to which L0 data will be
 /// compacted.
 pub const BASE_LEVEL: &CStr = property!("base-level");
